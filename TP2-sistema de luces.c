@@ -380,6 +380,10 @@ void switchLuzPosicion(int *pToggleLuzPosicion, int modo, int *pEstadoDelAutomat
   }
 }
 
+// brief: Módulo autómatico de luz de posición. Sólo activa si la bandera de autómatico está en true (true por default). 
+// Consiste en en llamadas a switchLuzPosicion() condicionales a la lectura que devuelve lecturaFotoresistor() y los parametros variables de switches (on/off). 
+// En caso de estar activa, imprime en el vértice inferior derecho la leyenda "PA" por "posición en automático"
+
 void luzPosicionEnAutomatico()
 {
   lectura = lecturaFotoresistor();
@@ -396,6 +400,3 @@ void luzPosicionEnAutomatico()
   lcd.print("PA");
 }
 
-// brief: Módulo autómatico de luz de posición. Sólo activa si la bandera de autómatico está en true (true por default). 
-// Consiste en en llamadas a switchLuzPosicion() condicionales a la lectura que devuelve lecturaFotoresistor() y los parametros variables de switches (on/off). 
-// En caso de estar activa, imprime en el vértice inferior derecho la leyenda "PA" por "posición en automático"
