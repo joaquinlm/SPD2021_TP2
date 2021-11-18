@@ -4,6 +4,7 @@
  *  Tema: Sistema de luces
  *  Grupo: "Los Borbotones"
  *  Integrantes: Áxel Claudio Melgar, Lucía Inés López, Joaquín Lubo Millán
+ *  URL del circuito:  https://www.tinkercad.com/things/2PLPvR0jNVY-tp2-lu/editel?sharecode=waoF0qpdcZ-VPuAsiN_MDoHHBMpHTqrE15bApViujIs
  */
 
 #include <LiquidCrystal.h>
@@ -330,7 +331,8 @@ void apagarFrenos(int *flagFrenos)
 
 // Funciones Luz de posición
 
-// brief: Función encargada de registrar y devolver la lectura del fotorresistor. No es llamada directamente en main sino que es usada por el módulo de posición en automático (linea 363)
+// brief: Función encargada de registrar y devolver la lectura del fotorresistor. No es llamada directamente en main sino que es usada
+// por el módulo de posición en automático (linea 363)
 // Está activa sólo si el flag que representa al estado del modo automático es true.
 // return: entero mapeado devuelto por el fotorresistor
 
@@ -394,4 +396,6 @@ void luzPosicionEnAutomatico()
   lcd.print("PA");
 }
 
-// brief: Módulo autómatico de luz de posición. Sólo activa si la bandera de autómatico está en true (true por default). Consiste en en llamadas a switchLuzPosicion() condicionales a la lectura que devuelve lecturaFotoresistor() y los parametros variables de switches (on/off). En caso de estar activa, imprime en el vértice inferior derecho la leyenda "PA" por "posición en automático"
+// brief: Módulo autómatico de luz de posición. Sólo activa si la bandera de autómatico está en true (true por default). 
+// Consiste en en llamadas a switchLuzPosicion() condicionales a la lectura que devuelve lecturaFotoresistor() y los parametros variables de switches (on/off). 
+// En caso de estar activa, imprime en el vértice inferior derecho la leyenda "PA" por "posición en automático"
